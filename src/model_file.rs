@@ -2,7 +2,7 @@ use std::path::Path;
 use std::fs;
 
 use crate::error::ConcertoError;
-use crate::metamodel::extended_metamodel::{DeclarationUnion, ImportUnion, Model, Properties, Model};
+use crate::metamodel::extended_metamodel::{DeclarationUnion, Model, Properties};
 use crate::validation::Validate;
 
 /// Represents a Concerto model file
@@ -13,8 +13,7 @@ pub struct ModelFile {
     // pub model: Model,
     pub content: String,
     pub file_name: String,
-    pub declarations: Vec<DeclarationUnion>,
-    pub import: Vec<ImportUnion>
+    pub declarations: Vec<DeclarationUnion>
 }
 
 impl From<Model> for ModelFile {
